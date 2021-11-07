@@ -2,4 +2,4 @@
 Compilation of Competiton Coding I have compiled for this school year!
 
 # Brett Flows
-<br/> Finds the ideal number of paths in the situational growing river
+Finds the ideal number of paths in the situational growing river
