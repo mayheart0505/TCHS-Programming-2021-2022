@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class strings1
+{
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String day = scan.nextLine();
+		
+		if(day.equals("Monday") ||day.equals("Tuesday") ||day.equals("Thursday") || day.equals("Friday")){
+		    System.out.println("7:00");
+		}else if(day.equals("Wednesday")){
+		    System.out.println("5:50");
+		}else{
+		    System.out.println("0:00");
+		}
+		
+	}
+}
