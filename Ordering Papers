@@ -1,0 +1,14 @@
+runs = int(input())
+
+for x in range(0,runs):
+    numExams = int(input())
+    total = 0
+    for y in range(0,numExams):
+        line = input().split()
+        numStud = int(line[0])
+        numPage = int(line[1])
+        startingPage = (numPage/4)
+        if startingPage > (numPage//4):
+           startingPage = (numPage//4)+1
+        total = total +(numStud*startingPage)
+    print(int(total))
