@@ -1,0 +1,192 @@
+//Banger #1
+import java.util.Scanner;
+
+public class five {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		
+		for(int i = 0; i<runs; i++){
+			int f = scan.nextInt();
+			System.out.println(f*5);
+		}
+
+	}
+
+}
+
+//Banger #2
+import java.util.Scanner;
+
+public class pass {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		
+		for(int i = 0; i<runs; i++){
+			int grade = scan.nextInt();
+			if(grade>=6){
+				System.out.println("PASS");
+			}else{
+				System.out.println("FAIL");
+			}
+		}
+	}
+
+}
+
+
+Banger #3
+import java.util.Scanner;
+
+public class fhsps2014c2p3 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		int count = 0;
+		for(int i = 0; i<runs; i++){
+			int numbers = scan.nextInt();
+			if(numbers<=25){
+				count++;
+			}
+		}
+		System.out.println("There are "+count +" bangers.");
+
+	}
+
+}
+
+Banger #4
+import java.util.Scanner;
+
+public class number5 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String phrase = scan.nextLine();
+		System.out.println("Malfunction. Need input.");
+		while(!phrase.equals("Disassemble")){
+			System.out.println(phrase);
+			phrase = scan.nextLine();
+		}
+		if(phrase.equals("Disassemble")){
+			System.out.println("Disassemble");
+			System.out.println("Yes, disassemble ALL OVER THE PLACE!");
+		}
+	
+	}
+
+}
+
+Banger #5
+import java.util.Scanner;
+
+public class fhsps2014c2p4 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+
+		for (int i = 0; i < runs; i++) {
+			double a = scan.nextDouble();
+			double b = scan.nextDouble();
+			double c = scan.nextDouble();
+
+			double s = (a + b + c) / 2.00;
+			double inside = s * (s - a) * (s - b) * (s - c);
+			double answer = Math.sqrt(inside);
+			answer = answer * 100;
+			int decimal = (int) (answer % 10);
+			if (decimal >= 5) {
+				answer += 1;
+			}
+			System.out.printf("%.1f\n", (answer / 100));
+			
+
+		}
+
+	}
+
+}
+
+Banger #6
+import java.util.Scanner;
+
+public class Prob09 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		scan.nextLine();
+
+		for (int i = 0; i < runs; i++) {
+			String input = scan.nextLine();
+			String [] a = input.split(" ");
+			boolean check = true;
+			boolean s = false;
+			int sCount = 0;
+			boolean p = false;
+			int pCount = 0;
+			boolean r = false;
+			int rCount = 0;
+			for(int l = 0; l<a.length; l++){
+				if(a[l].equals("R")){
+					r = true;
+					rCount++;
+				}else if(a[l].equals("P")){
+					p = true;
+					pCount++;
+				}else if(a[l].equals("S")){
+					s = true;
+					sCount++;
+				}
+			}
+			if(r && p && pCount==1 &&!s){
+				System.out.println("PAPER");
+			}else if(p && s && sCount == 1 &&!r){
+				System.out.println("SCISSORS");
+			}else if(r && s && rCount ==1 &&!p){
+				System.out.println("ROCK");
+			}else {
+				System.out.println("NO WINNER");
+			}
+		}
+
+	}
+
+}
+
+Banger #7
+import java.util.Scanner;
+
+public class Prob08 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		scan.nextLine();
+		for(int i = 0; i<runs;i++){
+			String input = scan.nextLine();
+			int out = Integer.parseInt(input.substring(0, input.length()-2));
+			
+			//System.out.println(out);
+			
+			if((out%100) == 11 ||(out%100) == 12 ||(out%100) == 13){
+				System.out.println(out +"th");
+			}else if(out%10 == 1){
+				System.out.println(out +"st");
+			}else if(out%10 == 2){
+				System.out.println(out + "nd");
+			}else if(out%10 == 3){
+				System.out.println(out+"rd");
+			}else{
+				System.out.println(out +"th");
+			}
+		}
+	}
+
+}
+
