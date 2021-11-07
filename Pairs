@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class pairs {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		int find = scan.nextInt();
+		int[] arr = new int[runs];
+		int there =0;
+		for (int i = 0; i < runs; i++) {
+			arr[i] = scan.nextInt();
+		}
+		for (int i = 0; i < runs-1; i++) {
+			
+			for (int l = i+1; l < runs; l++) {
+				//System.out.println("L: "+l);
+				//System.out.println("Subtracting "+arr[i] +" and "+arr[l]);
+				if(Math.abs(arr[i] -arr[l])==find){
+					there++;
+				}
+			}
+			
+		}
+		System.out.println(there);
+
+	}
+
+}
