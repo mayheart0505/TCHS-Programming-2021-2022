@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class snow {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		for(int i = 0; i<runs; i++){
+			int inches = scan.nextInt();
+			System.out.println((inches/12)+ " feet, " +(inches%12)+" inches of snow is the equivalent of " +(inches/10) +
+					" inches of rain");
+		}
+
+	}
+
+}
