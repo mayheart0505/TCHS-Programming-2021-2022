@@ -1,0 +1,31 @@
+import java.util.*;
+import java.util.Arrays;
+
+public class jacuzzi {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		for (int i = 0; i < runs; i++) {
+			int sides = scan.nextInt();
+			boolean check = true;
+			int[] lengths = new int[sides];
+			for (int x = 0; x < lengths.length; x++) {
+				lengths[x] = scan.nextInt();
+			}
+			if (sides == 1 || sides == 2) {
+				System.out.println("Jacuzzi #" + (i + 1) + ": NO");
+			} else {
+				Arrays.sort(lengths);
+				int total = lengths[lengths.length - 3] + lengths[lengths.length - 2];
+				if (lengths[lengths.length - 1] > total) {
+					System.out.println("Jacuzzi #" + (i + 1) + ": NO");
+				} else {
+					System.out.println("Jacuzzi #" + (i + 1) + ": YES");
+				}
+			}
+
+		}
+	}
+
+}
