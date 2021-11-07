@@ -41,3 +41,36 @@ Basic code of binary search
 
 ## Pizza
 Calculate how many more pizzas needed if given # of family members
+
+## Rollcall
+See if string (name) already exists, if not add them to roll call
+
+## String Practice
+String formatting practice
+
+## Seaboard
+Our first time using Breadth For Search algorithm in terms of a problem
+
+## Quick Change
+Calculate number of coins needed for the necessary amount of change
+
+## Practice Array #1
+Practice printing out simple array
+
+## Practice Array #2
+Practice adding items in array
+
+## Pairs
+Calculate how many pairs in an array
+
+## Palindromes
+Check if string is a palindrome
+
+## Cherryblossom
+Calculate how many cherryblossom areas you can go to given conditions
+
+## Snowapocolypse
+Calculate inches of snow given inches of rain
+
+## Northwest
+Display correct degrees given the direction
