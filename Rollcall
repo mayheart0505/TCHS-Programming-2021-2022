@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class rollcall {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+
+		for (int i = 0; i < runs; i++) {
+			int number = scan.nextInt();
+			int looking = scan.nextInt();
+			scan.nextLine();
+			String list = scan.nextLine().toLowerCase();
+			String[] there = list.split(" ");
+			for (int l = 0; l < looking; l++) {
+				String search = scan.nextLine().toLowerCase();
+				int count = 0;
+				for (int x = 0; x < there.length; x++) {
+					if (search.equals(there[x]))
+						count++;
+
+				}
+				System.out.println(count);
+			}
+
+		}
+
+	}
+}
