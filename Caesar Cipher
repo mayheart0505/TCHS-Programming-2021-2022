@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Prob102019 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+
+		for (int i = 0; i < runs; i++) {
+			int shift = scan.nextInt();
+			scan.nextLine();
+			String message = scan.nextLine();
+			int num = 0;
+			for (int x = 0; x < message.length(); x++) {
+
+				if (message.substring(x, x + 1).equals(" ")) {
+					System.out.print(" ");
+				} else {
+					num = (message.charAt(x)) - 'a';
+					num -= shift;
+					num %= 26;
+					if (num < 0) {
+						num += 26;
+
+					}
+					num += 'a';
+
+					System.out.print((char) (num));
+
+				}
+
+			}
+			System.out.println();
+
+		}
+
+	}
+
+}
