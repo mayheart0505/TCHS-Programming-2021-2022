@@ -6,3 +6,6 @@ Finds the ideal number of paths in the situational growing river
 
 ## Jaccuzzi
 Finds the ideal shape of jacuzzi given the size of sides
+
+## Ordering Papers
+(Python Practice) Figure out how many papers needed to make nth # of test books
