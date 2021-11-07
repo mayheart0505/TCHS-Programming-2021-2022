@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Prob052019 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		
+		for(int i = 0; i<runs;i++){
+			int one= scan.nextInt();
+			int five = scan.nextInt();
+			int length = scan.nextInt();
+			while(length>=5 && five>0){
+				length = length-5;
+				five--;
+			}
+			//System.out.println("It is currently " +length);
+//			if(length<0){
+//				length = length+5;
+//			}
+			//System.out.println("Now it is: "+length);
+			while(length>=1 && one>0){
+				length = length-1;
+				one--;
+				//System.out.println("Subtracting one from "+length);
+			}
+			if(length == 0){
+				System.out.println("true");
+			}else{
+				System.out.println("false");
+			}
+		}
+
+	}
+
+}
