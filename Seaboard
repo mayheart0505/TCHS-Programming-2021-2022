@@ -1,0 +1,58 @@
+import java.util.*;
+
+public class seaboard {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		int runs = scan.nextInt();
+		
+		for(int i = 0; i<runs;i++){
+			int towns = scan.nextInt();
+			int roads = scan.nextInt() +scan.nextInt();
+			
+			ArrayList<Route>[] map = new ArrayList[towns];
+			for(int go = 0; go<towns; go++){
+				map[go] = new ArrayList<Route>();
+			}
+			
+			for(int there = 0; there<roads;there++){
+				int to = scan.nextInt()-1;
+				int from = scan.nextInt()-1;
+				int weight = scan.nextInt();
+				
+				map[to].add(new Route(from, weight));
+				map[from].add(new Route(to,weight));
+				
+			}
+			
+			PriorityQueue<Route> pq = new PriorityQueue<>();
+			boolean[] visited = new boolean[towns];
+			int answer = 0;
+			
+			pq.addAll(map[0]);
+			visited[0] = true;
+			
+			while(!pq.isEmpty()){
+				Route temp = pq.poll();
+				if(visited[temp.to] == true)continue;
+				
+				answer +=temp.weight;
+				pq.addAll(map[temp.to]);
+				visited[temp.to] = true;
+			}
+			System.out.println(answer);
+		}
+	}
+}
+class Route implements Comparable<Route>{
+	public int to, weight;
+	public Route(int t, int w) {
+		to = t;
+		weight = w;
+	}
+	
+	public int compareTo(Route path){
+		return this.weight - path.weight;
+	}
+}
