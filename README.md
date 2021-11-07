@@ -74,3 +74,6 @@ Calculate inches of snow given inches of rain
 
 ## Northwest
 Display correct degrees given the direction
+
+## Password
+Find pattern and write code to display how many possibilities for password
