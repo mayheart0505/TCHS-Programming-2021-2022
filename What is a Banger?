@@ -1,0 +1,7 @@
+runs = int(input())
+banger = 0
+for l in range(0,runs):
+    number = int(input())
+    if(number <= 25):
+        banger = banger+1
+print("There are " + str(banger) + " bangers.")
