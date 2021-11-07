@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class palindromes {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int runs = scan.nextInt();
+		scan.nextLine();
+		for (int i = 0; i < runs; i++) {
+			String word = scan.nextLine();
+			word = word.toLowerCase();
+			String a = "";
+			for (int l = 0; l < word.length(); l++) {
+				if (word.charAt(l) >= 97 && word.charAt(l) <= 122) {
+					a = a + word.charAt(l);
+				}
+			}
+			String back = "";
+			for (int l = a.length() - 1; l >= 0; l--) {
+				back = back + a.charAt(l);
+			}
+			// System.out.println(a);
+			// System.out.println(back);
+			if(a.equals("")){
+				System.out.println("no");
+			}else{
+				if (a.equals(back)) {
+					System.out.println("yes");
+				} else {
+					System.out.println("no");
+				}
+			}
+		
+		}
+
+	}
+
+}
