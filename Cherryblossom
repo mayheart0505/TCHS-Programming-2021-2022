@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class cherry {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int tours = scan.nextInt();
+		int [] location = new int[tours];
+		for(int i =0; i<location.length; i++){
+			location[i] = scan.nextInt();
+		}
+//		for(int i =0; i<location.length; i++){
+//			System.out.println(location[i]);
+//		}
+		int runs = scan.nextInt();
+		for(int i = 0; i<runs;i++){
+			int start = scan.nextInt();
+			int end = scan.nextInt();
+			int total = 0;
+			for(int l = (start-1);l<(end); l++){
+				total+=location[l];
+			}
+			System.out.println(total);
+		}
+
+	}
+
+}
